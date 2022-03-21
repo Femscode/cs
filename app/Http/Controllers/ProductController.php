@@ -3,11 +3,55 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Course;
+use App\Models\Announcement;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+   
+    public function ann() {
+        $data['ann'] = Announcement::latest()->get();
+        $data['courses'] = Course::latest()->get();
+        return view('ann.index',$data);
+    }
+    public function createann(Request $request) {
+      
+       $ann = Announcement::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'course_id' => $request->course_id,
+           
+        ]);
+        return $ann;
+    }
+    public function loadann(Request $request) {
+        $id = $request->id;
+        $ann = Announcement::find($id);
+        return $ann;
+    }
+    public function editann(Request $request) {
+        $ann = Announcement::find($request->id);
+       
+       
+      $ann->name = $request->name;
+      $ann->description = $request->description;
+      $ann->course_id = $request->course_id;
+     
+     
+      $ann->save();
+   
+   
+        return $ann;
+    }
+    public function deleteann(Request $request) 
+    {
+        $id = $request->id;
+        $ann = Announcement::find($id);
+        $ann->delete();
+        return 'course deleted';
+    }
+
     public function courseindex() {
         // dd('here');
         return view('courses.index');
@@ -15,6 +59,7 @@ class ProductController extends Controller
     public function course() {
         // dd('here');
         $data['courses'] = Course::latest()->get();
+        $data['ann'] = Announcement::latest()->get();
         return view('courses.course',$data);
     }
     public function createcourse(Request $request) {

@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('courses.course');
+        return view('/dashboard');
     }
     public function logout() {
         Auth::logout();

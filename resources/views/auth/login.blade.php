@@ -1,144 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from eduport.webestica.com/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Mar 2022 17:47:37 GMT -->
 <head>
-	<title>ConnectinSkillz</title>
-
-	<!-- Meta Tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Webestica.com">
-	<meta name="description" content="Eduport- LMS, Education and Course Theme">
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/favicon.ico">
-
-	<!-- Google Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
-
-	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-
-	<!-- Theme CSS -->
-	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Login Veenode SME</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="{{ asset('adminasset/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('adminasset/assets/css/plugins.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('adminasset/assets/css/authentication/form-1.css')}}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/assets/css/forms/theme-checkbox-radio.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/assets/css/forms/switches.css')}}">
 </head>
 
-<body>
+<body class="form">
 
-<!-- **************** MAIN CONTENT START **************** -->
-<main>
-	<section class="p-0 d-flex align-items-center position-relative overflow-hidden">
-	
-		<div class="container-fluid">
-			<div class="row">
-				<!-- left -->
-				<div class="col-12 col-lg-6 d-md-flex align-items-center justify-content-center bg-primary bg-opacity-10 vh-lg-100">
-					<div class="p-3 p-lg-5">
-						<!-- Title -->
-						<div class="text-center">
-                            <h2>Sign up for your account!</h2>
-							{{-- <p class="mb-0 h6 fw-light">Let's learn something new today!</p> --}}
-						</div>
-						<!-- SVG Image -->
-						<img src="assets/images/element/02.svg" class="mt-5" alt="">
-						<!-- Info -->
-						<div class="d-sm-flex mt-5 align-items-center justify-content-center">
-							<ul class="avatar-group mb-2 mb-sm-0">
-								<li class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar"></li>
-								<li class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="avatar"></li>
-								<li class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar"></li>
-								<li class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt="avatar"></li>
-							</ul>
-							<!-- Content -->
-							<p class="mb-0 h6 fw-light ms-0 ms-sm-3">4k+ Students joined us, now it's your turn.</p>
-						</div>
-					</div>
-				</div>
+    <div class="form-container">
+        <div class="form-form">
+            <div class="form-form-wrap">
+                <div class="form-container">
+                    <div class="form-content">
 
-				<!-- Right -->
-				<div class="col-12 col-lg-6 m-auto">
-					<div class="row my-5">
-						<div class="col-sm-10 col-xl-8 m-auto">
-							<!-- Title -->
-							{{-- <img src="assets/images/element/03.svg" class="h-40px mb-2" alt=""> --}}
-						
-							{{-- <p class="lead mb-4">Nice to see you! Please Sign up with your account.</p> --}}
-						
-							<!-- Form START -->
-							<form method='post' action='{{ route("login") }}'>@csrf
-								<!-- Email -->
-								
-                                <div class="mb-4">
-									<label for="exampleInputEmail1" class="form-label">Email address *</label>
-									<div class="input-group input-group-lg">
-										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="bi bi-envelope-fill"></i></span>
-										<input type="email" class="form-control border-0 bg-light rounded-end ps-1" name='email' placeholder="E-mail" id="exampleInputEmail1">
-									</div>
-								</div>
-								<!-- Password -->
-								<div class="mb-4">
-									<label for="inputPassword5" class="form-label">Password *</label>
-									<div class="input-group input-group-lg">
-										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="fas fa-lock"></i></span>
-										<input type="password" name='password' class="form-control border-0 bg-light rounded-end ps-1" placeholder="*********" id="inputPassword5">
-									</div>
-								</div>
-								<!-- Confirm Password -->
-								<!-- Button -->
-								<div class="align-items-center mt-0">
-									<div class="d-grid">
-										<button class="btn btn-primary mb-0" type="submit">Sign Up</button>
-									</div>
-								</div>
-							</form>
-							<!-- Form END -->
+                        <h1 class="">Login</h1>
+                        <p class="signup-link">Yet to have an account? <a href="/register">Sign Up</a></p>
+                        <form class="text-left" action='{{ route("login") }}' method='post'>@csrf
+                            <div class="form">
+                                @if($errors->any())
+                                <div class="alert alert-danger">
+                                    <p><strong>Opps Something went wrong</strong></p>
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                @endif
 
-							<!-- Social buttons -->
-							<div class="row">
-								<!-- Divider with text -->
-								<div class="position-relative my-4">
-									<hr>
-									<p class="small position-absolute top-50 start-50 translate-middle bg-body px-5">Or</p>
-								</div>
-								<!-- Social btn -->
-								<div class="col-xxl-6 d-grid">
-									<a href="#" class="btn bg-google mb-2 mb-xxl-0"><i class="fab fa-fw fa-google text-white me-2"></i>Signup with Google</a>
-								</div>
-								<!-- Social btn -->
-								<div class="col-xxl-6 d-grid">
-									<a href="#" class="btn bg-facebook mb-0"><i class="fab fa-fw fa-facebook-f me-2"></i>Signup with Facebook</a>
-								</div>
-							</div>
 
-							<!-- Sign up link -->
-							<div class="mt-4 text-center">
-								<span>Don't have an account?<a href="/register"> Sign up here</a></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</main>
-<!-- **************** MAIN CONTENT END **************** -->
+                             
+                                <div id="email-field" class="field-wrapper input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-at-sign">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                                    </svg>
+                                    <input id="email" name="email" type="text" value="" placeholder="Email">
+                                </div>
+                              
+                                <div id="password-field" class="field-wrapper input mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-lock">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                    <input id="password" name="password" type="password" value=""
+                                        placeholder="Password">
+                                </div>
+                               
+                                <div class="field-wrapper terms_condition">
+                                    <div class="n-chk">
+                                        <label class="new-control">
+                                          
+                                            <span class="new-control-indicator"></span><span>Forgot your password? <a
+                                                    href="forgot-password">Click here </a> to reset it.</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="d-sm-flex justify-content-between">
+                                    <div class="field-wrapper toggle-pass">
+                                        <p class="d-inline-block">Show Password</p>
+                                        <label class="switch s-primary">
+                                            <input type="checkbox" id="toggle-password" class="d-none">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <button type="submit" class="btn btn-primary" value="">Login</button>
+                                    </div>
+                                </div>
 
-<!-- Back to top -->
-<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+                            </div>
+                        </form>
 
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-image">
+            <div class="l-image">
+            </div>
+        </div>
+    </div>
 
-<!-- Template Functions -->
-<script src="assets/js/functions.js"></script>
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="{{ asset('adminasset/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{ asset('adminasset/bootstrap/js/popper.min.js')}}"></script>
+    <script src="{{ asset('adminasset/bootstrap/js/bootstrap.min.js')}}"></script>
+
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <script src="{{ asset('adminasset/assets/js/authentication/form-1.js')}}"></script>
 
 </body>
 
-<!-- Mirrored from eduport.webestica.com/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Mar 2022 17:47:37 GMT -->
 </html>
