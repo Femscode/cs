@@ -4,7 +4,7 @@
 <!-- Mirrored from eduport.webestica.com/admin-course-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Mar 2022 17:48:32 GMT -->
 
 <head>
-	<title>Eduport- LMS, Education and Course Theme</title>
+	<title>ConnectinSkillz</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
@@ -77,8 +77,7 @@
 										Courses</a></li>
 								<li class="nav-item"> <a class="nav-link" href="admin-course-category.html">Course
 										Category</a></li>
-								<li class="nav-item"> <a class="nav-link" href="admin-course-detail.html">Course
-										Detail</a></li>
+								<li class="nav-item"> <a class="nav-link" href="/announcement">Announcements</a></li>
 							</ul>
 						</li>
 
@@ -430,18 +429,22 @@
 				<div class="row g-4 mb-4">
 					<!-- Course item -->
 					<div class="col-sm-6 col-lg-4">
+						<a href='/courses'>
 						<div class="text-center p-4 bg-primary bg-opacity-10 border border-primary rounded-3">
 							<h6>Total Courses</h6>
 							<h2 class="mb-0 fs-1 text-primary">{{ count($courses) }}</h2>
 						</div>
+					</a>
 					</div>
 
 					<!-- Course item -->
 					<div class="col-sm-6 col-lg-4">
+						<a href='/announcement'>
 						<div class="text-center p-4 bg-success bg-opacity-10 border border-success rounded-3">
 							<h6>Announcements</h6>
-							<h2 class="mb-0 fs-1 text-success">0</h2>
+							<h2 class="mb-0 fs-1 text-success">{{ count($ann) }}</h2>
 						</div>
+						</a>
 					</div>
 
 					<!-- Course item -->
