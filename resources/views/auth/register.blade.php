@@ -69,6 +69,15 @@
                                     </svg>
                                     <input id="phone" name="phone" type="text" value="" placeholder="Phone Number">
                                 </div>
+                                <div id="email-field" class="field-wrapper input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-phone">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                    <input id="referred_by" name="referred_by" type="text" value="" placeholder="Referred By(Optional)">
+                                </div>
                                 <div id="password-field" class="field-wrapper input mb-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

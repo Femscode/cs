@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -60,11 +61,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-      
+        $letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678";
+      $random = Str::random(5);
+      $ref_link = trim(substr($data['name'],0,5).'-'.$random);
+      if($data['referred_by'] == null) {
+          $data['referred_by'] = 'Admin';
+      }
+    
         $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
+            'referred_by' => $data['referred_by'],
+            'referral_link' => $ref_link,
             'password' => Hash::make($data['password']),
            
 

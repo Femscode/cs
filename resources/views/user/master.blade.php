@@ -362,7 +362,7 @@
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
                     <li class="menu">
-                        <a href="#dashboard" data-active="true" data-toggle="collapse" aria-expanded="true"
+                        <a href="/dashboard" data-active="true" data-toggle="collapse" aria-expanded="true"
                             class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -392,7 +392,7 @@
                         </ul> --}}
                     </li>
                     <li class="menu">
-                        <a href="fonticons.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="/dashboard" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -406,7 +406,7 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="fonticons.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="/buyairtime" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -420,7 +420,7 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="fonticons.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="/buydata" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -434,7 +434,7 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="fonticons.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="/fetchairtime" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -449,7 +449,7 @@
                     </li>
 
                     <li class="menu">
-                        <a href="fonticons.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="fundwallet" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -463,7 +463,7 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="fonticons.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="/dashboard" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -473,6 +473,21 @@
                                     <circle cx="12" cy="12" r="2"></circle>
                                 </svg>
                                 <span>Transactions</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="/usernotifications" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-target">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                                <span>Notifications</span>
                             </div>
                         </a>
                     </li>
@@ -589,19 +604,19 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="elements" data-parent="#accordionExample">
                             <li>
-                                <a href="/dstv"> DSTV </a>
+                                <a href="/cable"> DSTV </a>
                             </li>
                             <li>
-                                <a href="/gotv"> GOTV </a>
+                                <a href="/cable"> GOTV </a>
                             </li>
                             <li>
-                                <a href="/startimes"> STARTIMES </a>
+                                <a href="/cable"> STARTIMES </a>
                             </li>
                             <li>
                                 <a href="/electricity"> ELECTRICITY </a>
                             </li>
                             <li>
-                                <a href="/waec"> WAEC PIN </a>
+                                <a href="/exam"> WAEC PIN </a>
                             </li>
 
                         </ul>
@@ -645,10 +660,10 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="datatables" data-parent="#accordionExample">
                             <li>
-                                <a href="table_dt_basic.html"> Profile </a>
+                                <a href="/profile"> Profile </a>
                             </li>
                             <li>
-                                <a href="table_dt_striped_table.html"> Change Pin </a>
+                                <a href="profile"> Change Pin </a>
                             </li>
                             <li>
                                 <a onclick='return confirm("Are you sure you want to sign out");' href="/logout"> Logout
@@ -682,7 +697,7 @@
                     </li>
 
                     <li class="menu">
-                        <a href="map_jvector.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="wa.me/" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -692,6 +707,36 @@
                                     <line x1="16" y1="6" x2="16" y2="22"></line>
                                 </svg>
                                 <span>Whatsapp Group</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="wa.me/" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-map">
+                                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                                </svg>
+                                <span>Buy Giftcards</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="wa.me/" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-map">
+                                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                                </svg>
+                                <span>Buy BTC</span>
                             </div>
                         </a>
                     </li>
@@ -719,16 +764,16 @@
     <script src="{{ asset('adminasset/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
     <script src="{{ asset('adminasset/assets/js/app.js')}}"></script>
     <script>
-        ₦(document).ready(function() {
+        $(document).ready(function() {
             App.init();
         });
     </script>
-    <script src="{{ asset('assets/js/custom.js')}}"></script>
+    <script src="{{ asset('adminasset/assets/js/custom.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="{{ asset('plugins/apex/apexcharts.min.js')}}"></script>
-    <script src="{{ asset('assets/js/dashboard/dash_1.js')}}"></script>
+    <script src="{{ asset('adminasset/plugins/apex/apexcharts.min.js')}}"></script>
+    <script src="{{ asset('adminasset/assets/js/dashboard/dash_1.js')}}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     @yield('scripts')
 </body>

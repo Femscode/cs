@@ -1,5 +1,5 @@
 @extends('user.master')
-@section('headlinks')
+@section('head-links')
 @endsection
 @section('main')
 <div id="content" class="main-content">
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="card-body skew-shadow">
-                            <img src="https://setsub.com/dashboard/images/Wema-logo.jpg" width="100" alt="Bank Logo">
+                            <img src="adminasset/assets/img/wema.jpg" width="100" alt="Bank Logo">
                             <h4 class="py-4 mb-0 text-white">8117204728</h4>
 
                         </div>
@@ -44,7 +44,7 @@
                                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
                                     <polyline points="18 15 12 9 6 15"></polyline>
                                 </svg></span>
-                            <p> ₦0.00</p>
+                            <p> ₦{{ number_format(Auth::user()->balance,2) }}</p>
                         </div>
 
                         <div class="w-a-info funds-spent">
@@ -53,18 +53,23 @@
                                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                     <polyline points="6 9 12 15 18 9"></polyline>
                                 </svg></span>
-                            <p> ₦0.00</p>
+                            <p> ₦{{ number_format(Auth::user()->spent,2) }}</p>
                         </div>
                     </div>
 
                     <div class="widget-content">
 
                         <div class="bills-stats">
-                            <span>Fund Wallet</span>
+                            <a class='btn btn-success btn-sm' style='border-radius:5px' href='fundwallet'>Fund Wallet</a>
                         </div>
                         <div class="wallet-balance">
                             <p>Wallet Balance</p>
-                            <h5 class=""><span class="w-currency"> ₦</span>0.00</h5>
+                            <h5 class=""><span class="w-currency"> ₦</span>{{ number_format(Auth::user()->balance,2) }}</h5>
+                        </div>
+                        <br>
+                        <div>
+                            <a class='btn btn-info' href=''>Buy Giftcard</a>
+                            <a class='btn btn-warning' href=''>Buy BTC</a>
                         </div>
 
 
@@ -119,43 +124,33 @@
                                                 <th class="sorting" tabindex="0" aria-controls="default-ordering"
                                                     rowspan="1" colspan="1"
                                                     aria-label="Name: activate to sort column ascending"
-                                                    style="width: 108px;">Description</th>
+                                                    style="width: 108px;">Title</th>
                                                 <th class="sorting" tabindex="0" aria-controls="default-ordering"
                                                     rowspan="1" colspan="1"
                                                     aria-label="Position: activate to sort column ascending"
                                                     style="width: 166px;">Amount</th>
                                                 <th class="sorting" tabindex="0" aria-controls="default-ordering"
                                                     rowspan="1" colspan="1"
+                                                    aria-label="Position: activate to sort column ascending"
+                                                    style="width: 166px;">Description</th>
+                                                <th class="sorting" tabindex="0" aria-controls="default-ordering"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Office: activate to sort column ascending"
-                                                    style="width: 77px;">Action</th>
+                                                    style="width: 77px;">Time</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
+                                            @foreach($transactions as $tran)
                                             <tr role="row">
-                                                <td>Funding</td>
-                                                <td>₦500</td>
-                                                <td class="text-center"><button
-                                                        class="btn btn-primary btn-sm">View</button> </td>
+                                                <td>{{ $tran->title }}</td>
+                                                <td>₦{{ number_format($tran->amount,2) }}</td>
+                                                <td>{{ $tran->description }}</td>
+                                                <td>{{ Date('d-M,y | H:i',strtotime($tran->created_at ))}}</td>
+                                                {{-- <td class="text-center"><a href='transactiondetials/{{ $tran->id }}'
+                                                        class="btn btn-primary btn-sm">View</a>
+                                                </td> --}}
                                             </tr>
-                                            <tr role="row">
-                                                <td>Funding</td>
-                                                <td>₦500</td>
-                                                <td class="text-center"><button
-                                                        class="btn btn-primary btn-sm">View</button> </td>
-                                            </tr>
-                                            <tr role="row">
-                                                <td>Funding</td>
-                                                <td>₦500</td>
-                                                <td class="text-center"><button
-                                                        class="btn btn-primary btn-sm">View</button> </td>
-                                            </tr>
-                                            <tr role="row">
-                                                <td>Funding</td>
-                                                <td>₦500</td>
-                                                <td class="text-center"><button
-                                                        class="btn btn-primary btn-sm">View</button> </td>
-                                            </tr>
+                                            @endforeach
 
 
                                         </tbody>

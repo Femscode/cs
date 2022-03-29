@@ -110,7 +110,7 @@
                                 <div class="t-dot" data-original-title="" title="">
                                 </div>
                                 <div class="t-text">
-                                    <p>{{ Auth::user()->email }}</p>
+                                    <p>{{ Auth::user()->referral_link }}</p>
                                   
                                 </div>
                             </div>
